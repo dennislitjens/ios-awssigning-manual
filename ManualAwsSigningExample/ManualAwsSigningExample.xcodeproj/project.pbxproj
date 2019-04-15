@@ -14,6 +14,8 @@
 		92BCDF1622647F9C000F986B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92BCDF1522647F9C000F986B /* Assets.xcassets */; };
 		92BCDF1922647F9C000F986B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BCDF1722647F9C000F986B /* LaunchScreen.storyboard */; };
 		92BCDF2422647F9C000F986B /* ManualAwsSigningExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF2322647F9C000F986B /* ManualAwsSigningExampleTests.swift */; };
+		BF54F1914BAD7132AAFF4272 /* Pods_ManualAwsSigningExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B354E85E3B13C97F1186405 /* Pods_ManualAwsSigningExampleTests.framework */; };
+		BFC477F609C6D1BC8AE7F8E8 /* Pods_ManualAwsSigningExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2DD29D1515E98922CC0D8D0 /* Pods_ManualAwsSigningExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B354E85E3B13C97F1186405 /* Pods_ManualAwsSigningExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ManualAwsSigningExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BCDF0822647F9C000F986B /* ManualAwsSigningExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManualAwsSigningExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BCDF0B22647F9C000F986B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92BCDF0D22647F9C000F986B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +41,11 @@
 		92BCDF1F22647F9C000F986B /* ManualAwsSigningExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManualAwsSigningExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BCDF2322647F9C000F986B /* ManualAwsSigningExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualAwsSigningExampleTests.swift; sourceTree = "<group>"; };
 		92BCDF2522647F9C000F986B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9DB5498449D02C0C11B5CA8 /* Pods-ManualAwsSigningExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManualAwsSigningExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ManualAwsSigningExample/Pods-ManualAwsSigningExample.debug.xcconfig"; sourceTree = "<group>"; };
+		B2DD29D1515E98922CC0D8D0 /* Pods_ManualAwsSigningExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ManualAwsSigningExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF5E173789555B76A602F78A /* Pods-ManualAwsSigningExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManualAwsSigningExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ManualAwsSigningExample/Pods-ManualAwsSigningExample.release.xcconfig"; sourceTree = "<group>"; };
+		CEC22D92C87381FFC2228A93 /* Pods-ManualAwsSigningExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManualAwsSigningExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ManualAwsSigningExampleTests/Pods-ManualAwsSigningExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		F052515A67CA6A961D5414B2 /* Pods-ManualAwsSigningExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManualAwsSigningExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ManualAwsSigningExampleTests/Pods-ManualAwsSigningExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC477F609C6D1BC8AE7F8E8 /* Pods_ManualAwsSigningExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF54F1914BAD7132AAFF4272 /* Pods_ManualAwsSigningExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00772846A32A61F4D055EE06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2DD29D1515E98922CC0D8D0 /* Pods_ManualAwsSigningExample.framework */,
+				1B354E85E3B13C97F1186405 /* Pods_ManualAwsSigningExampleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		92BCDEFF22647F9C000F986B = {
 			isa = PBXGroup;
 			children = (
 				92BCDF0A22647F9C000F986B /* ManualAwsSigningExample */,
 				92BCDF2222647F9C000F986B /* ManualAwsSigningExampleTests */,
 				92BCDF0922647F9C000F986B /* Products */,
+				C862CB37F3CB4CD17B825B23 /* Pods */,
+				00772846A32A61F4D055EE06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +120,17 @@
 			path = ManualAwsSigningExampleTests;
 			sourceTree = "<group>";
 		};
+		C862CB37F3CB4CD17B825B23 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9DB5498449D02C0C11B5CA8 /* Pods-ManualAwsSigningExample.debug.xcconfig */,
+				BF5E173789555B76A602F78A /* Pods-ManualAwsSigningExample.release.xcconfig */,
+				F052515A67CA6A961D5414B2 /* Pods-ManualAwsSigningExampleTests.debug.xcconfig */,
+				CEC22D92C87381FFC2228A93 /* Pods-ManualAwsSigningExampleTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92BCDF2822647F9C000F986B /* Build configuration list for PBXNativeTarget "ManualAwsSigningExample" */;
 			buildPhases = (
+				B08B1917BAC7182EA119EBE3 /* [CP] Check Pods Manifest.lock */,
 				92BCDF0422647F9C000F986B /* Sources */,
 				92BCDF0522647F9C000F986B /* Frameworks */,
 				92BCDF0622647F9C000F986B /* Resources */,
+				FD678F2E1A14BA8759BD6DB7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +157,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92BCDF2B22647F9C000F986B /* Build configuration list for PBXNativeTarget "ManualAwsSigningExampleTests" */;
 			buildPhases = (
+				1386E283479DE9F2F589B54E /* [CP] Check Pods Manifest.lock */,
 				92BCDF1B22647F9C000F986B /* Sources */,
 				92BCDF1C22647F9C000F986B /* Frameworks */,
 				92BCDF1D22647F9C000F986B /* Resources */,
@@ -194,6 +229,93 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1386E283479DE9F2F589B54E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ManualAwsSigningExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B08B1917BAC7182EA119EBE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ManualAwsSigningExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD678F2E1A14BA8759BD6DB7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ManualAwsSigningExample/Pods-ManualAwsSigningExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ManualAwsSigningExample/Pods-ManualAwsSigningExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		92BCDF0422647F9C000F986B /* Sources */ = {
@@ -362,6 +484,7 @@
 		};
 		92BCDF2922647F9C000F986B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9DB5498449D02C0C11B5CA8 /* Pods-ManualAwsSigningExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -379,6 +502,7 @@
 		};
 		92BCDF2A22647F9C000F986B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF5E173789555B76A602F78A /* Pods-ManualAwsSigningExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +520,7 @@
 		};
 		92BCDF2C22647F9C000F986B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F052515A67CA6A961D5414B2 /* Pods-ManualAwsSigningExampleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -416,6 +541,7 @@
 		};
 		92BCDF2D22647F9C000F986B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEC22D92C87381FFC2228A93 /* Pods-ManualAwsSigningExampleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

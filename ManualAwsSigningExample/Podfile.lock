@@ -1,0 +1,57 @@
+PODS:
+  - Alamofire (4.8.2)
+  - AWSAuthCore (2.9.5):
+    - AWSCore (= 2.9.5)
+  - AWSCognitoIdentityProvider (2.9.5):
+    - AWSCognitoIdentityProviderASF (= 1.0.1)
+    - AWSCore (= 2.9.5)
+  - AWSCognitoIdentityProviderASF (1.0.1)
+  - AWSCore (2.9.5)
+  - AWSMobileClient (2.9.5):
+    - AWSAuthCore (= 2.9.5)
+    - AWSCognitoIdentityProvider (= 2.9.5)
+  - CryptoSwift (1.0.0)
+  - RxAlamofire (4.4.1):
+    - RxAlamofire/Core (= 4.4.1)
+  - RxAlamofire/Core (4.4.1):
+    - Alamofire (~> 4.8)
+    - RxSwift (~> 4.5)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
+
+DEPENDENCIES:
+  - AWSMobileClient
+  - CryptoSwift
+  - RxAlamofire
+  - RxCocoa
+  - RxSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AWSAuthCore
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSMobileClient
+    - CryptoSwift
+    - RxAlamofire
+    - RxCocoa
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AWSAuthCore: 62400ec16e67ebe810f0f8b662e8c532487d0178
+  AWSCognitoIdentityProvider: 52d859858e5166513fd7e1774d15596f405fa115
+  AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
+  AWSCore: 90ddc0234a321d5649c9572b1447f528f68d41b9
+  AWSMobileClient: 43aeda9d2e89438c70b456d96c1a1c347e8ec4dc
+  CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
+  RxAlamofire: ed65f451f5a9a59419b0b9e705043dc01410edd9
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+
+PODFILE CHECKSUM: 273febfa50ea31d206d679e29f08a54a671ae88e
+
+COCOAPODS: 1.5.3
