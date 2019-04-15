@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92BCDF0C22647F9C000F986B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF0B22647F9C000F986B /* AppDelegate.swift */; };
+		92BCDF0E22647F9C000F986B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF0D22647F9C000F986B /* ViewController.swift */; };
+		92BCDF1122647F9C000F986B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BCDF0F22647F9C000F986B /* Main.storyboard */; };
+		92BCDF1422647F9C000F986B /* ManualAwsSigningExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF1222647F9C000F986B /* ManualAwsSigningExample.xcdatamodeld */; };
+		92BCDF1622647F9C000F986B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92BCDF1522647F9C000F986B /* Assets.xcassets */; };
+		92BCDF1922647F9C000F986B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BCDF1722647F9C000F986B /* LaunchScreen.storyboard */; };
+		92BCDF2422647F9C000F986B /* ManualAwsSigningExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF2322647F9C000F986B /* ManualAwsSigningExampleTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92BCDF2022647F9C000F986B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92BCDF0022647F9C000F986B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92BCDF0722647F9C000F986B;
+			remoteInfo = ManualAwsSigningExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		92BCDF0822647F9C000F986B /* ManualAwsSigningExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManualAwsSigningExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92BCDF0B22647F9C000F986B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		92BCDF0D22647F9C000F986B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92BCDF1022647F9C000F986B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92BCDF1322647F9C000F986B /* ManualAwsSigningExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ManualAwsSigningExample.xcdatamodel; sourceTree = "<group>"; };
+		92BCDF1522647F9C000F986B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92BCDF1822647F9C000F986B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92BCDF1A22647F9C000F986B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92BCDF1F22647F9C000F986B /* ManualAwsSigningExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManualAwsSigningExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92BCDF2322647F9C000F986B /* ManualAwsSigningExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualAwsSigningExampleTests.swift; sourceTree = "<group>"; };
+		92BCDF2522647F9C000F986B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92BCDF0522647F9C000F986B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92BCDF1C22647F9C000F986B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92BCDEFF22647F9C000F986B = {
+			isa = PBXGroup;
+			children = (
+				92BCDF0A22647F9C000F986B /* ManualAwsSigningExample */,
+				92BCDF2222647F9C000F986B /* ManualAwsSigningExampleTests */,
+				92BCDF0922647F9C000F986B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92BCDF0922647F9C000F986B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92BCDF0822647F9C000F986B /* ManualAwsSigningExample.app */,
+				92BCDF1F22647F9C000F986B /* ManualAwsSigningExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92BCDF0A22647F9C000F986B /* ManualAwsSigningExample */ = {
+			isa = PBXGroup;
+			children = (
+				92BCDF0B22647F9C000F986B /* AppDelegate.swift */,
+				92BCDF0D22647F9C000F986B /* ViewController.swift */,
+				92BCDF0F22647F9C000F986B /* Main.storyboard */,
+				92BCDF1522647F9C000F986B /* Assets.xcassets */,
+				92BCDF1722647F9C000F986B /* LaunchScreen.storyboard */,
+				92BCDF1A22647F9C000F986B /* Info.plist */,
+				92BCDF1222647F9C000F986B /* ManualAwsSigningExample.xcdatamodeld */,
+			);
+			path = ManualAwsSigningExample;
+			sourceTree = "<group>";
+		};
+		92BCDF2222647F9C000F986B /* ManualAwsSigningExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				92BCDF2322647F9C000F986B /* ManualAwsSigningExampleTests.swift */,
+				92BCDF2522647F9C000F986B /* Info.plist */,
+			);
+			path = ManualAwsSigningExampleTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92BCDF0722647F9C000F986B /* ManualAwsSigningExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92BCDF2822647F9C000F986B /* Build configuration list for PBXNativeTarget "ManualAwsSigningExample" */;
+			buildPhases = (
+				92BCDF0422647F9C000F986B /* Sources */,
+				92BCDF0522647F9C000F986B /* Frameworks */,
+				92BCDF0622647F9C000F986B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ManualAwsSigningExample;
+			productName = ManualAwsSigningExample;
+			productReference = 92BCDF0822647F9C000F986B /* ManualAwsSigningExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92BCDF1E22647F9C000F986B /* ManualAwsSigningExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92BCDF2B22647F9C000F986B /* Build configuration list for PBXNativeTarget "ManualAwsSigningExampleTests" */;
+			buildPhases = (
+				92BCDF1B22647F9C000F986B /* Sources */,
+				92BCDF1C22647F9C000F986B /* Frameworks */,
+				92BCDF1D22647F9C000F986B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92BCDF2122647F9C000F986B /* PBXTargetDependency */,
+			);
+			name = ManualAwsSigningExampleTests;
+			productName = ManualAwsSigningExampleTests;
+			productReference = 92BCDF1F22647F9C000F986B /* ManualAwsSigningExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92BCDF0022647F9C000F986B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = AppFoundry;
+				TargetAttributes = {
+					92BCDF0722647F9C000F986B = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					92BCDF1E22647F9C000F986B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 92BCDF0722647F9C000F986B;
+					};
+				};
+			};
+			buildConfigurationList = 92BCDF0322647F9C000F986B /* Build configuration list for PBXProject "ManualAwsSigningExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92BCDEFF22647F9C000F986B;
+			productRefGroup = 92BCDF0922647F9C000F986B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92BCDF0722647F9C000F986B /* ManualAwsSigningExample */,
+				92BCDF1E22647F9C000F986B /* ManualAwsSigningExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92BCDF0622647F9C000F986B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92BCDF1922647F9C000F986B /* LaunchScreen.storyboard in Resources */,
+				92BCDF1622647F9C000F986B /* Assets.xcassets in Resources */,
+				92BCDF1122647F9C000F986B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92BCDF1D22647F9C000F986B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92BCDF0422647F9C000F986B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92BCDF0E22647F9C000F986B /* ViewController.swift in Sources */,
+				92BCDF0C22647F9C000F986B /* AppDelegate.swift in Sources */,
+				92BCDF1422647F9C000F986B /* ManualAwsSigningExample.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92BCDF1B22647F9C000F986B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92BCDF2422647F9C000F986B /* ManualAwsSigningExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92BCDF2122647F9C000F986B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92BCDF0722647F9C000F986B /* ManualAwsSigningExample */;
+			targetProxy = 92BCDF2022647F9C000F986B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		92BCDF0F22647F9C000F986B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92BCDF1022647F9C000F986B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		92BCDF1722647F9C000F986B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92BCDF1822647F9C000F986B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92BCDF2622647F9C000F986B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		92BCDF2722647F9C000F986B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92BCDF2922647F9C000F986B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ManualAwsSigningExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.appfoundry.ManualAwsSigningExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92BCDF2A22647F9C000F986B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ManualAwsSigningExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.appfoundry.ManualAwsSigningExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		92BCDF2C22647F9C000F986B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ManualAwsSigningExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.appfoundry.ManualAwsSigningExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ManualAwsSigningExample.app/ManualAwsSigningExample";
+			};
+			name = Debug;
+		};
+		92BCDF2D22647F9C000F986B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ManualAwsSigningExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = be.appfoundry.ManualAwsSigningExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ManualAwsSigningExample.app/ManualAwsSigningExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92BCDF0322647F9C000F986B /* Build configuration list for PBXProject "ManualAwsSigningExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92BCDF2622647F9C000F986B /* Debug */,
+				92BCDF2722647F9C000F986B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92BCDF2822647F9C000F986B /* Build configuration list for PBXNativeTarget "ManualAwsSigningExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92BCDF2922647F9C000F986B /* Debug */,
+				92BCDF2A22647F9C000F986B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92BCDF2B22647F9C000F986B /* Build configuration list for PBXNativeTarget "ManualAwsSigningExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92BCDF2C22647F9C000F986B /* Debug */,
+				92BCDF2D22647F9C000F986B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		92BCDF1222647F9C000F986B /* ManualAwsSigningExample.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				92BCDF1322647F9C000F986B /* ManualAwsSigningExample.xcdatamodel */,
+			);
+			currentVersion = 92BCDF1322647F9C000F986B /* ManualAwsSigningExample.xcdatamodel */;
+			path = ManualAwsSigningExample.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 92BCDF0022647F9C000F986B /* Project object */;
+}
