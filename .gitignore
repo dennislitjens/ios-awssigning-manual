@@ -156,6 +156,9 @@ playground.xcworkspace
 # Package.pins
 */.build/
 
+#AWS Credentials
+ManualAwsSigningExample/ManualAwsSigningExample/awsconfiguration.json
+
 ### Xcode ###
 # Xcode
 #
