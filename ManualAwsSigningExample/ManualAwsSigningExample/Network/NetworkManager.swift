@@ -8,19 +8,21 @@
 
 import Alamofire
 import os.log
+import RxSwift
 
 class NetworkManager {
 
     private let session: NetworkSession
     private let requests: NetworkManagerRequests
     var userService: UserService!
+    private let disposeBag = DisposeBag()
 
     init(session: NetworkSession, requests: NetworkManagerRequests) {
         self.session = session
         self.requests = requests
     }
 
-    func fetchLocationEntries() throws -> [LocationEntry] {
+    func fetchLocationEntries() throws -> Single<[LocationEntry]> {
         let request = self.requests.fetchLocationEntriesRequest()
         let sessionResponse = try self.session.perform(request: request)
 
@@ -30,7 +32,7 @@ class NetworkManager {
     func fetchSlackAuthorizationToken(
         slackUrlParameters: SlackConfig.SlackUrlParameters,
         code: String
-        ) throws -> SlackAuthTokens {
+    ) throws -> Single<SlackAuthTokens> {
         let response = try session.perform(
             request: self.requests.fetchSlackAuthorizationToken(
                 clientId: slackUrlParameters.slackClientId,
@@ -42,18 +44,24 @@ class NetworkManager {
         return try self.handleResponse(response: response)
     }
 
-    func fetchCognitoAuthToken(slackToken: String) throws -> CognitoAuthTokens {
+    func fetchCognitoAuthToken(slackToken: String) throws -> Single<CognitoAuthTokens> {
         let request = try self.requests.fetchCognitoAuthToken(with: slackToken)
         let response = try session.perform(request: request)
         return try self.handleResponse(response: response)
     }
 
-    private func handleResponseWithDataRoot<T: Decodable>(response: NetworkResponse) throws -> T {
-        return try JSONDecoder().decodeData(T.self, from: response.data, keyedBy: "data")
+    private func handleResponseWithDataRoot<T: Decodable>(response: Single<NetworkResponse>) throws -> Single<T> {
+        return response
+            .map { response in
+                return try JSONDecoder().decodeData(T.self, from: response.data, keyedBy: "data")
+        }
     }
 
-    private func handleResponse<T: Decodable>(response: NetworkResponse) throws -> T {
-        return try JSONDecoder().decode(T.self, from: response.data)
+    private func handleResponse<T: Decodable>(response: Single<NetworkResponse>) throws -> Single<T> {
+        return response
+            .map { response in
+                return try JSONDecoder().decode(T.self, from: response.data)
+        }
     }
 
     private func refreshCredentials() throws {

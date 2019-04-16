@@ -40,7 +40,7 @@
                     <color key="textColor" red="1" green="0.01208707165" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYC-n9-yqj">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYC-n9-yqj" customClass="LoadingButton" customModule="ManualAwsSigningExample" customModuleProvider="target">
                     <rect key="frame" x="127.5" y="250.5" width="120" height="30"/>
                     <state key="normal" title="Sign in with Slack"/>
                     <connections>

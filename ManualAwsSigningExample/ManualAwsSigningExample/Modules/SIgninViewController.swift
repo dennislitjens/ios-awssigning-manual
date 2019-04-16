@@ -12,13 +12,24 @@ import os.log
 
 class SigninViewController: UIViewController {
 
-    @IBOutlet var signinButton: UIButton!
+    @IBOutlet var signinButton: LoadingButton!
     @IBOutlet var signedinStatusLabel: UILabel!
     var userService: UserService!
     var networkManager: NetworkManager!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+
+    func startAuthFlow(with slackCode: String) {
+        self.signinButton.showLoading()
+        do {
+            try self.userService.startAuthFlow(slackCode: slackCode)
+        } catch {
+            self.signinButton.hideLoading()
+            os_log("AuthFlow error: %@", type: .error, error.localizedDescription)
+        }
     }
 
     //MARK: Actions

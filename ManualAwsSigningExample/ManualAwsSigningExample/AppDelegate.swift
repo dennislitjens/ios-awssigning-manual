@@ -8,11 +8,13 @@
 
 import UIKit
 import Swinject
+import os.log
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var signinViewController: SigninViewController!
 
     private let container = Container { container in
         let swinjectResolver = SwinjectResolver(container: container)
@@ -23,9 +25,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
-        window.rootViewController = self.container.resolve(SigninViewController.self)!
+        self.signinViewController = self.container.resolve(SigninViewController.self)!
+        window.rootViewController = self.signinViewController
         self.window = window
 
+        return true
+    }
+
+    func application(_ app: UIApplication, open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        if let queryItems = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems,
+            let slackCode = queryItems[0].value {
+            self.signinViewController.startAuthFlow(with: slackCode)
+        }
         return true
     }
 }

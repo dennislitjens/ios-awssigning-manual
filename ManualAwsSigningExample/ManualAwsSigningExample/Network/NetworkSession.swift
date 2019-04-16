@@ -7,35 +7,35 @@
 //
 
 import Alamofire
+import RxSwift
 
 protocol NetworkSession {
-    func perform(request: URLRequest) throws -> NetworkResponse
+    func perform(request: URLRequest) throws -> Single<NetworkResponse>
 }
 
 extension SessionManager: NetworkSession {
-    func perform(request: URLRequest) throws -> NetworkResponse {
-        var networkResponse: NetworkResponse?
+    func perform(request: URLRequest) throws -> Single<NetworkResponse> {
+        return Single.create { single -> Disposable in
             self.request(request)
                 .validate()
                 .responseData(completionHandler: { response in
                     switch response.result {
                     case .success(let data):
-                        networkResponse = NetworkManagerResponse(
+                        single(.success(NetworkManagerResponse(
                             response: response.response,
                             data: data
-                        )
+                        )))
                     case .failure(let error):
-                        networkResponse = NetworkManagerResponseError(
+                        single(.error(NetworkManagerResponseError(
                             response: response.response,
                             data: response.data ?? Data(),
                             networkError: error
-                        )
+                        )))
                     }
                 })
-        if let response = networkResponse {
-            return response
-        } else {
-            throw NetworkError.noResponseError
+
+            return Disposables.create()
         }
     }
 }
+

@@ -9,6 +9,7 @@
 import UIKit
 import AWSMobileClient
 import os.log
+import RxSwift
 
 class UserService {
 
@@ -32,65 +33,80 @@ class UserService {
         UIApplication.shared.open(url, options: [:])
     }
 
-    func startAuthFlow(slackCode: String) throws {
-        let slackAuthTokens = try self.networkManager.fetchSlackAuthorizationToken(
+    func startAuthFlow(slackCode: String) throws -> Single<String> {
+        return try self.networkManager.fetchSlackAuthorizationToken(
             slackUrlParameters: self.slackUrlParameters,
             code: slackCode
-        )
-        self.saveAwsCredentials()
-        let cognitoAuthToken = try self.networkManager.fetchCognitoAuthToken(slackToken: slackAuthTokens.accessToken)
-        self.federatedSignin(cognitoTokens: cognitoAuthToken)
-        self.saveAwsCredentials()
+            ).do(onSuccess: { [weak self] token in
+                self?.userDefaultsService.saveSlackAuthToken(token: SlackAuthTokens(accessToken: token.accessToken, scope: token.scope))
+            })
+            .flatMap { self.saveAwsCredentials(slackToken: $0.accessToken) }
+            .flatMap { try self.networkManager.fetchCognitoAuthToken(slackToken: $0) }
+            .flatMap { self.federatedSignin(cognitoTokens: $0) }
+            .flatMap { _ in self.saveAwsCredentials(slackToken: "") }
     }
 
-    func startRefreshAuthFlow() throws {
+    func startRefreshAuthFlow() -> Single<String> {
         if let slackToken = self.userDefaultsService.getSlackAuthToken() {
             AWSMobileClient.sharedInstance().signOut()
-            self.initializeAWSMobileClient()
-            self.saveAwsCredentials()
-            let cognitoAuthToken = try self.networkManager.fetchCognitoAuthToken(slackToken: slackToken.accessToken)
-            self.federatedSignin(cognitoTokens: cognitoAuthToken)
-            self.saveAwsCredentials()
+            return self.initializeAWSMobileClient()
+                .flatMap { _ in self.saveAwsCredentials(slackToken: slackToken.accessToken) }
+                .flatMap { try self.networkManager.fetchCognitoAuthToken(slackToken: $0) }
+                .flatMap { self.federatedSignin(cognitoTokens: $0) }
+                .flatMap { _ in self.saveAwsCredentials(slackToken: "") }
         } else {
-            os_log("\nNo SlackAuthToken stored in userdefaults.", type: .error)
+            return .just("")
         }
     }
 
-    private func federatedSignin(cognitoTokens: CognitoAuthTokens) {
-        AWSMobileClient.sharedInstance().federatedSignIn(
-            providerName: IdentityProvider.developer.rawValue,
-            token: cognitoTokens.token,
-            federatedSignInOptions: FederatedSignInOptions(cognitoIdentityId: cognitoTokens.identityId),
-            completionHandler: { (userState, error) in
-                if let userState = userState {
-                    os_log("\nSigned in as: %@", type: .debug, userState.rawValue)
+    private func federatedSignin(cognitoTokens: CognitoAuthTokens) -> Single<Void> {
+        return Single.create { single in
+            AWSMobileClient.sharedInstance().federatedSignIn(
+                providerName: IdentityProvider.developer.rawValue,
+                token: cognitoTokens.token,
+                federatedSignInOptions: FederatedSignInOptions(cognitoIdentityId: cognitoTokens.identityId),
+                completionHandler: { (userState, error) in
+                    if let userState = userState {
+                        os_log("\nSigned in as: %@", type: .debug, userState.rawValue)
+                        single(.success(()))
+                    } else if let error = error {
+                        single(.error(AWSError.awsFederatedSigninFail(error)))
+                    }
+            }
+            )
+            return Disposables.create {}
+        }
+    }
+
+    func saveAwsCredentials(slackToken: String) -> Single<String> {
+        return Single.create { single in
+            AWSMobileClient.sharedInstance().getAWSCredentials { [weak self] (credentials, error)  in
+                if let credentials = credentials, let sessionKey = credentials.sessionKey {
+                    let codableCredentials = AwsCredentials(
+                        accessKey: credentials.accessKey,
+                        secretKey: credentials.secretKey,
+                        sessionKey: sessionKey
+                    )
+                    self?.userDefaultsService.saveAwsCredentials(awsCredentials: codableCredentials)
+                    return single(.success(slackToken))
                 } else if let error = error {
-                    os_log("\nFederated signin error: %@", type: .error, error.localizedDescription)
+                    return single(.error(AWSError.awsCredentialsFetchFail(error)))
                 }
             }
-        )
-    }
-
-    func saveAwsCredentials() {
-        AWSMobileClient.sharedInstance().getAWSCredentials { [weak self] (credentials, error)  in
-            if let credentials = credentials, let sessionKey = credentials.sessionKey {
-                let codableCredentials = AwsCredentials(
-                    accessKey: credentials.accessKey,
-                    secretKey: credentials.secretKey,
-                    sessionKey: sessionKey
-                )
-                self?.userDefaultsService.saveAwsCredentials(awsCredentials: codableCredentials)
-            }
+            return Disposables.create {}
         }
     }
 
-    private func initializeAWSMobileClient() {
-        AWSMobileClient.sharedInstance().initialize { (userState, error) in
-            if let error = error {
-                os_log("\nError initializing AwsMobileClient: %@", type: .error, error.localizedDescription)
-            } else if let state = userState {
-                os_log("\nSigned in as: %@", type: .debug, state.rawValue)
+    private func initializeAWSMobileClient() -> Single<Void> {
+        return Single.create { single in
+            AWSMobileClient.sharedInstance().initialize { (userState, error) in
+                if let error = error {
+                    return single(.error(error))
+                } else if userState != nil {
+                    return single(.success(()))
+                }
             }
+            return Disposables.create {}
         }
     }
 }
