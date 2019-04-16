@@ -11,7 +11,7 @@ import RxSwift
 
 protocol NetworkSession {
     func perform(request: URLRequest) throws -> Single<NetworkResponse>
-}
+} 
 
 extension SessionManager: NetworkSession {
     func perform(request: URLRequest) throws -> Single<NetworkResponse> {

@@ -33,17 +33,21 @@ class UserService {
         UIApplication.shared.open(url, options: [:])
     }
 
-    func startAuthFlow(slackCode: String) throws -> Single<String> {
-        return try self.networkManager.fetchSlackAuthorizationToken(
-            slackUrlParameters: self.slackUrlParameters,
-            code: slackCode
-            ).do(onSuccess: { [weak self] token in
-                self?.userDefaultsService.saveSlackAuthToken(token: SlackAuthTokens(accessToken: token.accessToken, scope: token.scope))
-            })
-            .flatMap { self.saveAwsCredentials(slackToken: $0.accessToken) }
-            .flatMap { try self.networkManager.fetchCognitoAuthToken(slackToken: $0) }
-            .flatMap { self.federatedSignin(cognitoTokens: $0) }
-            .flatMap { _ in self.saveAwsCredentials(slackToken: "") }
+    func startAuthFlow(slackCode: String) -> Single<String> {
+        do {
+            return try self.networkManager.fetchSlackAuthorizationToken(
+                slackUrlParameters: self.slackUrlParameters,
+                code: slackCode
+                ).do(onSuccess: { [weak self] token in
+                    self?.userDefaultsService.saveSlackAuthToken(token: SlackAuthTokens(accessToken: token.accessToken, scope: token.scope))
+                })
+                .flatMap { self.saveAwsCredentials(slackToken: $0.accessToken) }
+                .flatMap { try self.networkManager.fetchCognitoAuthToken(slackToken: $0) }
+                .flatMap { self.federatedSignin(cognitoTokens: $0) }
+                .flatMap { _ in self.saveAwsCredentials(slackToken: "") }
+        } catch {
+            return Single.error(AWSError.awsSigningError)
+        }
     }
 
     func startRefreshAuthFlow() -> Single<String> {

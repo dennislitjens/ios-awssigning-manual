@@ -12,6 +12,8 @@ PODS:
     - AWSCognitoIdentityProvider (= 2.9.5)
   - CryptoSwift (1.0.0)
   - Direkt (1.1.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.5.0)
   - Swinject (2.6.0)
 
@@ -20,6 +22,7 @@ DEPENDENCIES:
   - AWSMobileClient
   - CryptoSwift
   - Direkt
+  - RxCocoa
   - RxSwift
   - Swinject
 
@@ -33,6 +36,7 @@ SPEC REPOS:
     - AWSMobileClient
     - CryptoSwift
     - Direkt
+    - RxCocoa
     - RxSwift
     - Swinject
 
@@ -45,9 +49,10 @@ SPEC CHECKSUMS:
   AWSMobileClient: 43aeda9d2e89438c70b456d96c1a1c347e8ec4dc
   CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
   Direkt: 0b933b19be778b88db4935c9e6d57e05d0c7a577
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
 
-PODFILE CHECKSUM: e548ed934418cc4ec559ab107443c8a95f15b27f
+PODFILE CHECKSUM: 33000bcffe2e794ad534c7607fd25e3e1ae90778
 
 COCOAPODS: 1.5.3

@@ -10,14 +10,11 @@ import UIKit
 
 class LoadingButton: UIButton {
     var buttonText: String?
-    var attributedString: NSAttributedString?
     var activityIndicator: UIActivityIndicatorView!
 
     func showLoading() {
         self.buttonText = self.titleLabel?.text
-        self.attributedString = self.titleLabel?.attributedText
         self.setTitle("", for: .normal)
-        self.setAttributedTitle(NSAttributedString(string: ""), for: .normal)
 
         if activityIndicator == nil {
             activityIndicator = createActivityIndicator()
@@ -29,7 +26,6 @@ class LoadingButton: UIButton {
     func hideLoading() {
         if activityIndicator != nil {
             self.setTitle(self.buttonText, for: .normal)
-            self.setAttributedTitle(self.attributedString, for: .normal)
             activityIndicator.stopAnimating()
         }
     }

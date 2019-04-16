@@ -9,6 +9,7 @@
 import UIKit
 import Swinject
 import os.log
+import AWSMobileClient
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //Init before creating controller.
+        self.initializeAwsMobileClient()
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
         self.signinViewController = self.container.resolve(SigninViewController.self)!
@@ -39,6 +42,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.signinViewController.startAuthFlow(with: slackCode)
         }
         return true
+    }
+
+    private func initializeAwsMobileClient() {
+        AWSMobileClient.sharedInstance().initialize { (userState, error) in
+            if let error = error {
+                os_log("Aws init failed: %@", type: .error, error.localizedDescription)
+            }
+        }
     }
 }
 

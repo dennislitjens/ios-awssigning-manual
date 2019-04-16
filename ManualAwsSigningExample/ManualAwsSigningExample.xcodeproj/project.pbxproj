@@ -16,6 +16,8 @@
 		920796A82265C9E4003E64DD /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920796A72265C9E4003E64DD /* ServiceAssembly.swift */; };
 		920796AA2265C9F2003E64DD /* NetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920796A92265C9F2003E64DD /* NetworkAssembly.swift */; };
 		920796B12265F53F003E64DD /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920796B02265F53F003E64DD /* LoadingButton.swift */; };
+		920796B322661F35003E64DD /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920796B222661F35003E64DD /* UIViewController+Toast.swift */; };
+		920796B522661F40003E64DD /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920796B422661F40003E64DD /* PaddingLabel.swift */; };
 		92BCDF0C22647F9C000F986B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF0B22647F9C000F986B /* AppDelegate.swift */; };
 		92BCDF0E22647F9C000F986B /* SIgninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF0D22647F9C000F986B /* SIgninViewController.swift */; };
 		92BCDF1122647F9C000F986B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BCDF0F22647F9C000F986B /* Main.storyboard */; };
@@ -68,6 +70,8 @@
 		920796A72265C9E4003E64DD /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
 		920796A92265C9F2003E64DD /* NetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembly.swift; sourceTree = "<group>"; };
 		920796B02265F53F003E64DD /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
+		920796B222661F35003E64DD /* UIViewController+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Toast.swift"; sourceTree = "<group>"; };
+		920796B422661F40003E64DD /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		92BCDF0822647F9C000F986B /* ManualAwsSigningExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManualAwsSigningExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BCDF0B22647F9C000F986B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92BCDF0D22647F9C000F986B /* SIgninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIgninViewController.swift; sourceTree = "<group>"; };
@@ -209,7 +213,7 @@
 				920796972265BE73003E64DD /* Config */,
 				92BCDF582264C63B000F986B /* Modules */,
 				92BCDF512264AD46000F986B /* Services */,
-				92BCDF492264AC00000F986B /* Extentions */,
+				92BCDF492264AC00000F986B /* Extensions */,
 				92BCDF482264AA35000F986B /* AwsSigning */,
 				92BCDF3222649E9B000F986B /* Network */,
 				92BCDF3122649DF3000F986B /* SupportingFiles */,
@@ -284,13 +288,15 @@
 			path = AwsSigning;
 			sourceTree = "<group>";
 		};
-		92BCDF492264AC00000F986B /* Extentions */ = {
+		92BCDF492264AC00000F986B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				92BCDF4A2264AC1E000F986B /* JSONDecoder+rootDecode.swift */,
 				92BCDF562264BE62000F986B /* URL+QueryItems.swift */,
+				920796B222661F35003E64DD /* UIViewController+Toast.swift */,
+				920796B422661F40003E64DD /* PaddingLabel.swift */,
 			);
-			path = Extentions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		92BCDF512264AD46000F986B /* Services */ = {
@@ -487,6 +493,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Direkt/Direkt.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
@@ -502,6 +509,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Direkt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
@@ -523,6 +531,7 @@
 				92BCDF3F2264A40F000F986B /* HTTP.swift in Sources */,
 				92BCDF3D2264A25C000F986B /* NetworkManagerRequests.swift in Sources */,
 				92BCDF3422649EA7000F986B /* NetworkManager.swift in Sources */,
+				920796B522661F40003E64DD /* PaddingLabel.swift in Sources */,
 				92BCDF602264D092000F986B /* SigningAdapter.swift in Sources */,
 				92BCDF3622649FC7000F986B /* NetworkSession.swift in Sources */,
 				920796B12265F53F003E64DD /* LoadingButton.swift in Sources */,
@@ -537,6 +546,7 @@
 				92BCDF0C22647F9C000F986B /* AppDelegate.swift in Sources */,
 				92BCDF432264A8F4000F986B /* SlackAuthTokens.swift in Sources */,
 				9207969F2265BF26003E64DD /* SlackConfig.swift in Sources */,
+				920796B322661F35003E64DD /* UIViewController+Toast.swift in Sources */,
 				92BCDF5E2264D083000F986B /* SignRequest.swift in Sources */,
 				920796AA2265C9F2003E64DD /* NetworkAssembly.swift in Sources */,
 				92BCDF1422647F9C000F986B /* ManualAwsSigningExample.xcdatamodeld in Sources */,

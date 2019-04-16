@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SigninViewController" customModule="ManualAwsSigningExample" customModuleProvider="target">
             <connections>
+                <outlet property="callButton" destination="ycf-68-b0y" id="FDO-Ps-xsF"/>
                 <outlet property="signedinStatusLabel" destination="Clz-PG-8cZ" id="rkb-IZ-Ixs"/>
                 <outlet property="signinButton" destination="EYC-n9-yqj" id="jGL-rL-Mwu"/>
                 <outlet property="view" destination="iN0-l3-epB" id="faK-h1-7th"/>
@@ -34,8 +35,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not signed in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clz-PG-8cZ">
-                    <rect key="frame" x="125" y="144" width="125.5" height="26.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not signed in" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clz-PG-8cZ">
+                    <rect key="frame" x="10" y="144" width="355" height="26.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <color key="textColor" red="1" green="0.01208707165" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -47,17 +48,28 @@
                         <action selector="signinWithSlack:" destination="-1" eventType="touchUpInside" id="hJY-XN-SPj"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycf-68-b0y">
+                    <rect key="frame" x="130.5" y="290.5" width="114" height="30"/>
+                    <state key="normal" title="Make signed call"/>
+                    <connections>
+                        <action selector="makeSignedCall:" destination="-1" eventType="touchUpInside" id="gpT-g6-fuI"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="EYC-n9-yqj" firstAttribute="top" secondItem="Clz-PG-8cZ" secondAttribute="bottom" constant="80" id="0sM-cI-uwQ"/>
+                <constraint firstItem="ycf-68-b0y" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="90N-Tu-6Z8"/>
                 <constraint firstItem="Vkm-SR-eck" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="A0L-yl-IPI"/>
                 <constraint firstItem="XQj-ja-Gq5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="67" id="Bp2-T8-urM"/>
+                <constraint firstItem="Clz-PG-8cZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="Kkv-hV-RnN"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="XQj-ja-Gq5" secondAttribute="bottom" constant="20" id="LTE-Tn-OQm"/>
                 <constraint firstItem="Clz-PG-8cZ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="UGp-YA-PQq"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XQj-ja-Gq5" secondAttribute="trailing" constant="68" id="Wte-UM-5pZ"/>
                 <constraint firstItem="Clz-PG-8cZ" firstAttribute="top" secondItem="Vkm-SR-eck" secondAttribute="bottom" constant="50" id="geh-1J-dS0"/>
                 <constraint firstItem="Vkm-SR-eck" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="iT2-TX-MoH"/>
+                <constraint firstItem="ycf-68-b0y" firstAttribute="top" secondItem="EYC-n9-yqj" secondAttribute="bottom" constant="10" id="u05-z1-Aqb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Clz-PG-8cZ" secondAttribute="trailing" constant="10" id="xNL-7V-ZbA"/>
                 <constraint firstItem="EYC-n9-yqj" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="y1y-nc-dFZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

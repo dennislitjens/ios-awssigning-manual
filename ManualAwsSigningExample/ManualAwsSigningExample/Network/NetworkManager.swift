@@ -54,14 +54,14 @@ class NetworkManager {
         return response
             .map { response in
                 return try JSONDecoder().decodeData(T.self, from: response.data, keyedBy: "data")
-        }
+            }
     }
 
     private func handleResponse<T: Decodable>(response: Single<NetworkResponse>) throws -> Single<T> {
         return response
             .map { response in
                 return try JSONDecoder().decode(T.self, from: response.data)
-        }
+            }
     }
 
     private func refreshCredentials() throws {

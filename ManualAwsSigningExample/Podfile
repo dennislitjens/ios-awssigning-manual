@@ -11,6 +11,7 @@ target 'ManualAwsSigningExample' do
   pod 'Direkt'
   pod 'Swinject'
   pod 'RxSwift'
+  pod 'RxCocoa'
 
   # Pods for ManualAwsSigningExample
 
