@@ -7,13 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		920796992265BE89003E64DD /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 920796982265BE89003E64DD /* Config.plist */; };
+		9207969B2265BE93003E64DD /* SlackConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9207969A2265BE93003E64DD /* SlackConfig.plist */; };
+		9207969D2265BEE6003E64DD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9207969C2265BEE6003E64DD /* Config.swift */; };
+		9207969F2265BF26003E64DD /* SlackConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9207969E2265BF26003E64DD /* SlackConfig.swift */; };
+		920796A32265C8FE003E64DD /* SwinjectResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920796A22265C8FE003E64DD /* SwinjectResolver.swift */; };
+		920796A62265C9DA003E64DD /* ControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920796A52265C9DA003E64DD /* ControllerAssembly.swift */; };
+		920796A82265C9E4003E64DD /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920796A72265C9E4003E64DD /* ServiceAssembly.swift */; };
+		920796AA2265C9F2003E64DD /* NetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920796A92265C9F2003E64DD /* NetworkAssembly.swift */; };
 		92BCDF0C22647F9C000F986B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF0B22647F9C000F986B /* AppDelegate.swift */; };
-		92BCDF0E22647F9C000F986B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF0D22647F9C000F986B /* ViewController.swift */; };
+		92BCDF0E22647F9C000F986B /* SIgninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF0D22647F9C000F986B /* SIgninViewController.swift */; };
 		92BCDF1122647F9C000F986B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BCDF0F22647F9C000F986B /* Main.storyboard */; };
 		92BCDF1422647F9C000F986B /* ManualAwsSigningExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF1222647F9C000F986B /* ManualAwsSigningExample.xcdatamodeld */; };
 		92BCDF1622647F9C000F986B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92BCDF1522647F9C000F986B /* Assets.xcassets */; };
 		92BCDF1922647F9C000F986B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BCDF1722647F9C000F986B /* LaunchScreen.storyboard */; };
 		92BCDF2422647F9C000F986B /* ManualAwsSigningExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF2322647F9C000F986B /* ManualAwsSigningExampleTests.swift */; };
+		92BCDF2F22649A5E000F986B /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 92BCDF2E22649A5E000F986B /* awsconfiguration.json */; };
+		92BCDF3422649EA7000F986B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF3322649EA7000F986B /* NetworkManager.swift */; };
+		92BCDF3622649FC7000F986B /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF3522649FC7000F986B /* NetworkSession.swift */; };
+		92BCDF382264A074000F986B /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF372264A074000F986B /* NetworkResponse.swift */; };
+		92BCDF3B2264A11C000F986B /* LocationEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF3A2264A11C000F986B /* LocationEntry.swift */; };
+		92BCDF3D2264A25C000F986B /* NetworkManagerRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF3C2264A25C000F986B /* NetworkManagerRequests.swift */; };
+		92BCDF3F2264A40F000F986B /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF3E2264A40F000F986B /* HTTP.swift */; };
+		92BCDF432264A8F4000F986B /* SlackAuthTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF422264A8F4000F986B /* SlackAuthTokens.swift */; };
+		92BCDF452264A9BB000F986B /* CognitoAuthTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF442264A9BB000F986B /* CognitoAuthTokens.swift */; };
+		92BCDF4B2264AC1E000F986B /* JSONDecoder+rootDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF4A2264AC1E000F986B /* JSONDecoder+rootDecode.swift */; };
+		92BCDF4E2264AC50000F986B /* RootResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF4D2264AC50000F986B /* RootResponse.swift */; };
+		92BCDF502264ACF2000F986B /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF4F2264ACF2000F986B /* UserService.swift */; };
+		92BCDF532264AD6D000F986B /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF522264AD6D000F986B /* UserDefaultsService.swift */; };
+		92BCDF552264ADFE000F986B /* AwsCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF542264ADFE000F986B /* AwsCredentials.swift */; };
+		92BCDF572264BE62000F986B /* URL+QueryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF562264BE62000F986B /* URL+QueryItems.swift */; };
+		92BCDF5A2264C670000F986B /* SigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BCDF592264C670000F986B /* SigninViewController.xib */; };
+		92BCDF5C2264D065000F986B /* UrlRequestSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF5B2264D065000F986B /* UrlRequestSigner.swift */; };
+		92BCDF5E2264D083000F986B /* SignRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF5D2264D083000F986B /* SignRequest.swift */; };
+		92BCDF602264D092000F986B /* SigningAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF5F2264D092000F986B /* SigningAdapter.swift */; };
+		92BCDF622264D1D7000F986B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF612264D1D7000F986B /* NetworkError.swift */; };
 		BF54F1914BAD7132AAFF4272 /* Pods_ManualAwsSigningExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B354E85E3B13C97F1186405 /* Pods_ManualAwsSigningExampleTests.framework */; };
 		BFC477F609C6D1BC8AE7F8E8 /* Pods_ManualAwsSigningExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2DD29D1515E98922CC0D8D0 /* Pods_ManualAwsSigningExample.framework */; };
 /* End PBXBuildFile section */
@@ -30,9 +58,17 @@
 
 /* Begin PBXFileReference section */
 		1B354E85E3B13C97F1186405 /* Pods_ManualAwsSigningExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ManualAwsSigningExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		920796982265BE89003E64DD /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		9207969A2265BE93003E64DD /* SlackConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SlackConfig.plist; sourceTree = "<group>"; };
+		9207969C2265BEE6003E64DD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		9207969E2265BF26003E64DD /* SlackConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackConfig.swift; sourceTree = "<group>"; };
+		920796A22265C8FE003E64DD /* SwinjectResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectResolver.swift; sourceTree = "<group>"; };
+		920796A52265C9DA003E64DD /* ControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerAssembly.swift; sourceTree = "<group>"; };
+		920796A72265C9E4003E64DD /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
+		920796A92265C9F2003E64DD /* NetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembly.swift; sourceTree = "<group>"; };
 		92BCDF0822647F9C000F986B /* ManualAwsSigningExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManualAwsSigningExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BCDF0B22647F9C000F986B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		92BCDF0D22647F9C000F986B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92BCDF0D22647F9C000F986B /* SIgninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIgninViewController.swift; sourceTree = "<group>"; };
 		92BCDF1022647F9C000F986B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92BCDF1322647F9C000F986B /* ManualAwsSigningExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ManualAwsSigningExample.xcdatamodel; sourceTree = "<group>"; };
 		92BCDF1522647F9C000F986B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +77,26 @@
 		92BCDF1F22647F9C000F986B /* ManualAwsSigningExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManualAwsSigningExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BCDF2322647F9C000F986B /* ManualAwsSigningExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualAwsSigningExampleTests.swift; sourceTree = "<group>"; };
 		92BCDF2522647F9C000F986B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92BCDF2E22649A5E000F986B /* awsconfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		92BCDF3322649EA7000F986B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		92BCDF3522649FC7000F986B /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		92BCDF372264A074000F986B /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		92BCDF3A2264A11C000F986B /* LocationEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEntry.swift; sourceTree = "<group>"; };
+		92BCDF3C2264A25C000F986B /* NetworkManagerRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerRequests.swift; sourceTree = "<group>"; };
+		92BCDF3E2264A40F000F986B /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		92BCDF422264A8F4000F986B /* SlackAuthTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackAuthTokens.swift; sourceTree = "<group>"; };
+		92BCDF442264A9BB000F986B /* CognitoAuthTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoAuthTokens.swift; sourceTree = "<group>"; };
+		92BCDF4A2264AC1E000F986B /* JSONDecoder+rootDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+rootDecode.swift"; sourceTree = "<group>"; };
+		92BCDF4D2264AC50000F986B /* RootResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootResponse.swift; sourceTree = "<group>"; };
+		92BCDF4F2264ACF2000F986B /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		92BCDF522264AD6D000F986B /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
+		92BCDF542264ADFE000F986B /* AwsCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwsCredentials.swift; sourceTree = "<group>"; };
+		92BCDF562264BE62000F986B /* URL+QueryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+QueryItems.swift"; sourceTree = "<group>"; };
+		92BCDF592264C670000F986B /* SigninViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SigninViewController.xib; sourceTree = "<group>"; };
+		92BCDF5B2264D065000F986B /* UrlRequestSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequestSigner.swift; sourceTree = "<group>"; };
+		92BCDF5D2264D083000F986B /* SignRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignRequest.swift; sourceTree = "<group>"; };
+		92BCDF5F2264D092000F986B /* SigningAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningAdapter.swift; sourceTree = "<group>"; };
+		92BCDF612264D1D7000F986B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		A9DB5498449D02C0C11B5CA8 /* Pods-ManualAwsSigningExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManualAwsSigningExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ManualAwsSigningExample/Pods-ManualAwsSigningExample.debug.xcconfig"; sourceTree = "<group>"; };
 		B2DD29D1515E98922CC0D8D0 /* Pods_ManualAwsSigningExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ManualAwsSigningExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5E173789555B76A602F78A /* Pods-ManualAwsSigningExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManualAwsSigningExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ManualAwsSigningExample/Pods-ManualAwsSigningExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +133,45 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		920796972265BE73003E64DD /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				9207969C2265BEE6003E64DD /* Config.swift */,
+				9207969E2265BF26003E64DD /* SlackConfig.swift */,
+				920796A42265C902003E64DD /* ConfigFiles */,
+				920796A02265C8E2003E64DD /* Swinject */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		920796A02265C8E2003E64DD /* Swinject */ = {
+			isa = PBXGroup;
+			children = (
+				920796A12265C8F0003E64DD /* Assemblies */,
+				920796A22265C8FE003E64DD /* SwinjectResolver.swift */,
+			);
+			path = Swinject;
+			sourceTree = "<group>";
+		};
+		920796A12265C8F0003E64DD /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				920796A52265C9DA003E64DD /* ControllerAssembly.swift */,
+				920796A72265C9E4003E64DD /* ServiceAssembly.swift */,
+				920796A92265C9F2003E64DD /* NetworkAssembly.swift */,
+			);
+			path = Assemblies;
+			sourceTree = "<group>";
+		};
+		920796A42265C902003E64DD /* ConfigFiles */ = {
+			isa = PBXGroup;
+			children = (
+				920796982265BE89003E64DD /* Config.plist */,
+				9207969A2265BE93003E64DD /* SlackConfig.plist */,
+			);
+			path = ConfigFiles;
+			sourceTree = "<group>";
+		};
 		92BCDEFF22647F9C000F986B = {
 			isa = PBXGroup;
 			children = (
@@ -100,13 +195,17 @@
 		92BCDF0A22647F9C000F986B /* ManualAwsSigningExample */ = {
 			isa = PBXGroup;
 			children = (
+				920796972265BE73003E64DD /* Config */,
+				92BCDF582264C63B000F986B /* Modules */,
+				92BCDF512264AD46000F986B /* Services */,
+				92BCDF492264AC00000F986B /* Extentions */,
+				92BCDF482264AA35000F986B /* AwsSigning */,
+				92BCDF3222649E9B000F986B /* Network */,
+				92BCDF3122649DF3000F986B /* SupportingFiles */,
+				92BCDF3022649DE9000F986B /* Resources */,
 				92BCDF0B22647F9C000F986B /* AppDelegate.swift */,
-				92BCDF0D22647F9C000F986B /* ViewController.swift */,
-				92BCDF0F22647F9C000F986B /* Main.storyboard */,
-				92BCDF1522647F9C000F986B /* Assets.xcassets */,
-				92BCDF1722647F9C000F986B /* LaunchScreen.storyboard */,
 				92BCDF1A22647F9C000F986B /* Info.plist */,
-				92BCDF1222647F9C000F986B /* ManualAwsSigningExample.xcdatamodeld */,
+				92BCDF2E22649A5E000F986B /* awsconfiguration.json */,
 			);
 			path = ManualAwsSigningExample;
 			sourceTree = "<group>";
@@ -118,6 +217,87 @@
 				92BCDF2522647F9C000F986B /* Info.plist */,
 			);
 			path = ManualAwsSigningExampleTests;
+			sourceTree = "<group>";
+		};
+		92BCDF3022649DE9000F986B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				92BCDF1222647F9C000F986B /* ManualAwsSigningExample.xcdatamodeld */,
+				92BCDF1522647F9C000F986B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		92BCDF3122649DF3000F986B /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				92BCDF1722647F9C000F986B /* LaunchScreen.storyboard */,
+				92BCDF0F22647F9C000F986B /* Main.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		92BCDF3222649E9B000F986B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				92BCDF392264A0FE000F986B /* ResponseTypes */,
+				92BCDF3322649EA7000F986B /* NetworkManager.swift */,
+				92BCDF3522649FC7000F986B /* NetworkSession.swift */,
+				92BCDF372264A074000F986B /* NetworkResponse.swift */,
+				92BCDF3C2264A25C000F986B /* NetworkManagerRequests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		92BCDF392264A0FE000F986B /* ResponseTypes */ = {
+			isa = PBXGroup;
+			children = (
+				92BCDF3A2264A11C000F986B /* LocationEntry.swift */,
+				92BCDF3E2264A40F000F986B /* HTTP.swift */,
+				92BCDF422264A8F4000F986B /* SlackAuthTokens.swift */,
+				92BCDF442264A9BB000F986B /* CognitoAuthTokens.swift */,
+				92BCDF4D2264AC50000F986B /* RootResponse.swift */,
+				92BCDF542264ADFE000F986B /* AwsCredentials.swift */,
+			);
+			path = ResponseTypes;
+			sourceTree = "<group>";
+		};
+		92BCDF482264AA35000F986B /* AwsSigning */ = {
+			isa = PBXGroup;
+			children = (
+				92BCDF5B2264D065000F986B /* UrlRequestSigner.swift */,
+				92BCDF5D2264D083000F986B /* SignRequest.swift */,
+				92BCDF5F2264D092000F986B /* SigningAdapter.swift */,
+				92BCDF612264D1D7000F986B /* NetworkError.swift */,
+			);
+			path = AwsSigning;
+			sourceTree = "<group>";
+		};
+		92BCDF492264AC00000F986B /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				92BCDF4A2264AC1E000F986B /* JSONDecoder+rootDecode.swift */,
+				92BCDF562264BE62000F986B /* URL+QueryItems.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		92BCDF512264AD46000F986B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				92BCDF4F2264ACF2000F986B /* UserService.swift */,
+				92BCDF522264AD6D000F986B /* UserDefaultsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		92BCDF582264C63B000F986B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				92BCDF0D22647F9C000F986B /* SIgninViewController.swift */,
+				92BCDF592264C670000F986B /* SigninViewController.xib */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		C862CB37F3CB4CD17B825B23 /* Pods */ = {
@@ -215,8 +395,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92BCDF2F22649A5E000F986B /* awsconfiguration.json in Resources */,
+				92BCDF5A2264C670000F986B /* SigninViewController.xib in Resources */,
+				9207969B2265BE93003E64DD /* SlackConfig.plist in Resources */,
 				92BCDF1922647F9C000F986B /* LaunchScreen.storyboard in Resources */,
 				92BCDF1622647F9C000F986B /* Assets.xcassets in Resources */,
+				920796992265BE89003E64DD /* Config.plist in Resources */,
 				92BCDF1122647F9C000F986B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,9 +475,8 @@
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Direkt/Direkt.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -306,9 +489,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Direkt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -322,9 +504,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92BCDF0E22647F9C000F986B /* ViewController.swift in Sources */,
+				92BCDF552264ADFE000F986B /* AwsCredentials.swift in Sources */,
+				920796A82265C9E4003E64DD /* ServiceAssembly.swift in Sources */,
+				92BCDF5C2264D065000F986B /* UrlRequestSigner.swift in Sources */,
+				92BCDF3F2264A40F000F986B /* HTTP.swift in Sources */,
+				92BCDF3D2264A25C000F986B /* NetworkManagerRequests.swift in Sources */,
+				92BCDF3422649EA7000F986B /* NetworkManager.swift in Sources */,
+				92BCDF602264D092000F986B /* SigningAdapter.swift in Sources */,
+				92BCDF3622649FC7000F986B /* NetworkSession.swift in Sources */,
+				92BCDF622264D1D7000F986B /* NetworkError.swift in Sources */,
+				920796A62265C9DA003E64DD /* ControllerAssembly.swift in Sources */,
+				92BCDF502264ACF2000F986B /* UserService.swift in Sources */,
+				92BCDF3B2264A11C000F986B /* LocationEntry.swift in Sources */,
+				920796A32265C8FE003E64DD /* SwinjectResolver.swift in Sources */,
+				92BCDF0E22647F9C000F986B /* SIgninViewController.swift in Sources */,
+				92BCDF572264BE62000F986B /* URL+QueryItems.swift in Sources */,
+				92BCDF452264A9BB000F986B /* CognitoAuthTokens.swift in Sources */,
 				92BCDF0C22647F9C000F986B /* AppDelegate.swift in Sources */,
+				92BCDF432264A8F4000F986B /* SlackAuthTokens.swift in Sources */,
+				9207969F2265BF26003E64DD /* SlackConfig.swift in Sources */,
+				92BCDF5E2264D083000F986B /* SignRequest.swift in Sources */,
+				920796AA2265C9F2003E64DD /* NetworkAssembly.swift in Sources */,
 				92BCDF1422647F9C000F986B /* ManualAwsSigningExample.xcdatamodeld in Sources */,
+				9207969D2265BEE6003E64DD /* Config.swift in Sources */,
+				92BCDF532264AD6D000F986B /* UserDefaultsService.swift in Sources */,
+				92BCDF382264A074000F986B /* NetworkResponse.swift in Sources */,
+				92BCDF4E2264AC50000F986B /* RootResponse.swift in Sources */,
+				92BCDF4B2264AC1E000F986B /* JSONDecoder+rootDecode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,7 +702,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = be.appfoundry.ManualAwsSigningExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -514,7 +720,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = be.appfoundry.ManualAwsSigningExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

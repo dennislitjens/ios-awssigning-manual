@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SigninViewController" customModule="ManualAwsSigningExample" customModuleProvider="target">
+            <connections>
+                <outlet property="signedinStatusLabel" destination="Clz-PG-8cZ" id="rkb-IZ-Ixs"/>
+                <outlet property="signinButton" destination="EYC-n9-yqj" id="jGL-rL-Mwu"/>
+                <outlet property="view" destination="iN0-l3-epB" id="faK-h1-7th"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appfoundry_logo" translatesAutoresizingMaskIntoConstraints="NO" id="XQj-ja-Gq5">
+                    <rect key="frame" x="67" y="397" width="240" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="qke-2V-Zt2"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aws Manual Signing Example" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vkm-SR-eck">
+                    <rect key="frame" x="60.5" y="70" width="254" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not signed in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clz-PG-8cZ">
+                    <rect key="frame" x="125" y="144" width="125.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="1" green="0.01208707165" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYC-n9-yqj">
+                    <rect key="frame" x="127.5" y="250.5" width="120" height="30"/>
+                    <state key="normal" title="Sign in with Slack"/>
+                    <connections>
+                        <action selector="signinWithSlack:" destination="-1" eventType="touchUpInside" id="hJY-XN-SPj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="EYC-n9-yqj" firstAttribute="top" secondItem="Clz-PG-8cZ" secondAttribute="bottom" constant="80" id="0sM-cI-uwQ"/>
+                <constraint firstItem="Vkm-SR-eck" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="A0L-yl-IPI"/>
+                <constraint firstItem="XQj-ja-Gq5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="67" id="Bp2-T8-urM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="XQj-ja-Gq5" secondAttribute="bottom" constant="20" id="LTE-Tn-OQm"/>
+                <constraint firstItem="Clz-PG-8cZ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="UGp-YA-PQq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XQj-ja-Gq5" secondAttribute="trailing" constant="68" id="Wte-UM-5pZ"/>
+                <constraint firstItem="Clz-PG-8cZ" firstAttribute="top" secondItem="Vkm-SR-eck" secondAttribute="bottom" constant="50" id="geh-1J-dS0"/>
+                <constraint firstItem="Vkm-SR-eck" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="iT2-TX-MoH"/>
+                <constraint firstItem="EYC-n9-yqj" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="y1y-nc-dFZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="appfoundry_logo" width="375" height="465"/>
+    </resources>
+</document>

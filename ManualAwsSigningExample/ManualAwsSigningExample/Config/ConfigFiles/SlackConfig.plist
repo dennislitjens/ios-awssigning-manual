@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>slackAuthURL</key>
+	<string>https://slack.com/oauth/authorize</string>
+	<key>slackRedirectUri</key>
+	<string>docfoundry://slackauth</string>
+	<key>slackScope</key>
+	<string>identity.basic,identity.email,identity.avatar</string>
+	<key>slackClientId</key>
+	<string>2181372515.402332337735</string>
+	<key>slackTeamId</key>
+	<string>T025BAYF5</string>
+	<key>slackAuthTokenBaseURL</key>
+	<string>https://slack.com/api/</string>
+	<key>slackClientSecret</key>
+	<string>632a24f2598b157f515459875b5c9caa</string>
+</dict>
+</plist>
