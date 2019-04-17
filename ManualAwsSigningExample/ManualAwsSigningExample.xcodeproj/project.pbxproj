@@ -19,7 +19,7 @@
 		920796B322661F35003E64DD /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920796B222661F35003E64DD /* UIViewController+Toast.swift */; };
 		920796B522661F40003E64DD /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920796B422661F40003E64DD /* PaddingLabel.swift */; };
 		92BCDF0C22647F9C000F986B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF0B22647F9C000F986B /* AppDelegate.swift */; };
-		92BCDF0E22647F9C000F986B /* SIgninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF0D22647F9C000F986B /* SIgninViewController.swift */; };
+		92BCDF0E22647F9C000F986B /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF0D22647F9C000F986B /* SigninViewController.swift */; };
 		92BCDF1122647F9C000F986B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BCDF0F22647F9C000F986B /* Main.storyboard */; };
 		92BCDF1422647F9C000F986B /* ManualAwsSigningExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92BCDF1222647F9C000F986B /* ManualAwsSigningExample.xcdatamodeld */; };
 		92BCDF1622647F9C000F986B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92BCDF1522647F9C000F986B /* Assets.xcassets */; };
@@ -74,7 +74,7 @@
 		920796B422661F40003E64DD /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		92BCDF0822647F9C000F986B /* ManualAwsSigningExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManualAwsSigningExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BCDF0B22647F9C000F986B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		92BCDF0D22647F9C000F986B /* SIgninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIgninViewController.swift; sourceTree = "<group>"; };
+		92BCDF0D22647F9C000F986B /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		92BCDF1022647F9C000F986B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92BCDF1322647F9C000F986B /* ManualAwsSigningExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ManualAwsSigningExample.xcdatamodel; sourceTree = "<group>"; };
 		92BCDF1522647F9C000F986B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -311,7 +311,7 @@
 		92BCDF582264C63B000F986B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				92BCDF0D22647F9C000F986B /* SIgninViewController.swift */,
+				92BCDF0D22647F9C000F986B /* SigninViewController.swift */,
 				92BCDF592264C670000F986B /* SigninViewController.xib */,
 			);
 			path = Modules;
@@ -540,7 +540,7 @@
 				92BCDF502264ACF2000F986B /* UserService.swift in Sources */,
 				92BCDF3B2264A11C000F986B /* LocationEntry.swift in Sources */,
 				920796A32265C8FE003E64DD /* SwinjectResolver.swift in Sources */,
-				92BCDF0E22647F9C000F986B /* SIgninViewController.swift in Sources */,
+				92BCDF0E22647F9C000F986B /* SigninViewController.swift in Sources */,
 				92BCDF572264BE62000F986B /* URL+QueryItems.swift in Sources */,
 				92BCDF452264A9BB000F986B /* CognitoAuthTokens.swift in Sources */,
 				92BCDF0C22647F9C000F986B /* AppDelegate.swift in Sources */,

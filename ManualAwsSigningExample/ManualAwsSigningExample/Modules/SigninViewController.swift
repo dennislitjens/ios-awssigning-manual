@@ -15,7 +15,6 @@ import AWSMobileClient
 
 class SigninViewController: UIViewController {
 
-    private let disposeBag = DisposeBag()
     @IBOutlet var signinButton: LoadingButton! {
         didSet {
             if AWSMobileClient.sharedInstance().isSignedIn {
@@ -45,6 +44,7 @@ class SigninViewController: UIViewController {
     }
     var userService: UserService!
     var networkManager: NetworkManager!
+    private let disposeBag = DisposeBag()
 
     private var loginSuccess = BehaviorSubject<Bool>(value: false)
     internal var loginSuccessDriver: Driver<Bool> {
@@ -64,12 +64,12 @@ class SigninViewController: UIViewController {
 
     func startAuthFlow(with slackCode: String) {
         self.signinButton.showLoading()
-            self.userService.startAuthFlow(slackCode: slackCode)
-                .subscribe(onSuccess: { [weak self] _ in
-                    self?.loginSuccess.onNext(true)
+        self.userService.startAuthFlow(slackCode: slackCode)
+            .subscribe(onSuccess: { [weak self] _ in
+                self?.loginSuccess.onNext(true)
                 }, onError: {
                     os_log("AuthFlow error: %@", type: .error, $0.localizedDescription)
-                }).disposed(by: self.disposeBag)
+            }).disposed(by: self.disposeBag)
     }
 
     //MARK: Actions
